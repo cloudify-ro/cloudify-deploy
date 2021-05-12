@@ -7,8 +7,8 @@ This action help you to deploy your code to Cloudify.
 ## Action Inputs
 | Name                  | Requirement       | Description |
 |:--------------------- |:----------------- |:------------|
-| `credential_id` | **Required**      | Application Credential Id use for authentication. For generate application credentials, see [here](https://help.cloudify.ro/en/article/generate-application-credentials-for-project-1wlq1za/).
-| `credential_secret`         | **Required**      | Application Credential Secret use for authentication. For generate application credentials, see [here](https://help.cloudify.ro/en/article/generate-application-credentials-for-project-1wlq1za/).
+| `credential_id` | **Required**      | Credential id use for authentication. For generate credentials, see [here](https://help.cloudify.ro/en/article/generate-application-credentials-for-project-1wlq1za/).
+| `credential_secret`         | **Required**      | Credential secret use for authentication. For generate credentials, see [here](https://help.cloudify.ro/en/article/generate-application-credentials-for-project-1wlq1za/).
 | `name`             | ***Optional***    | Description.
 | `keypair_name`      | ***Optional***    | Description.
 | `command`           | ***Optional***    | Description.
