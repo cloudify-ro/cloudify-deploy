@@ -1,0 +1,52 @@
+name: "Deploy to Cloudify"
+author: Cloudify
+description: "Deploy your code on Cloudify with GitHub Actions"
+branding:
+  icon: cloud
+  color: purple
+inputs:
+  credential_id:
+    description: "Application Credential Id; Used for authorization."
+    required: true
+  credential_secret:
+    description: "Application Credential Secret; Used for authorization."
+    required: true
+  name:
+    description: "Your name server"
+    required: true
+  keypair_name:
+    description: "Keypair name for SSH"
+    required: true
+  command:
+    description: "Your command for deploy"
+    required: true
+  flavor:
+    description: "Flavor for server"
+    default: m1.g2.4
+    required: false
+  image:
+    description: "Image id for server, for docker commands a pre-installed docker image is required."
+    default: docker-ubuntu-20.04 
+    required: false
+  network_id:
+    description: "Network id for server"
+    default: "public"
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - run: echo $'#cloud-config\nruncmd:\n - ${{ inputs.command }}'>runcmd.sh
+      shell: bash
+    - run: cat runcmd.sh
+      shell: bash
+    - run: openstack server create --image ${{ inputs.image }} --flavor ${{ inputs.flavor }} --network ${{ inputs.network_id }} --user-data runcmd.sh --key-name ${{ inputs.keypair_name }} ${{ inputs.name }}
+      shell: bash
+      env:
+        OS_AUTH_TYPE: v3applicationcredential
+        OS_AUTH_URL: https://id.cloud.acvile.com/v3
+        OS_IDENTITY_API_VERSION: "3"
+        OS_REGION_NAME: "eu-east-1"
+        OS_INTERFACE: public
+        OS_APPLICATION_CREDENTIAL_ID: ${{ inputs.credential_id }}
+        OS_APPLICATION_CREDENTIAL_SECRET: ${{ inputs.credential_secret }}

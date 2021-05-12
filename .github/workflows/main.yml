@@ -1,0 +1,20 @@
+# on: [push]
+
+# jobs:
+#   deploy_cloudify_job:
+#     runs-on: ubuntu-latest
+#     name: Deploy to Cloudify
+#     steps:
+#     - uses: actions/checkout@v2
+#     - uses: actions/setup-python@v1
+#     - uses: BSFishy/pip-action@v1
+#       with:
+#         packages: python-openstackclient
+#     - id: deploy-to-cloudify
+#       uses: ./
+#       with: 
+#         credential_id: ${{ secrets.ID }}
+#         credential_secret: ${{ secrets.SECRET }}
+#         name: server-github-01
+#         keypair_name: alin-key
+#         command: docker run --name wordpress-github -p 80:80 -d wordpress
