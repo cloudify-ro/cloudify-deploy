@@ -20,9 +20,9 @@ The openstack client must be installed. For this we need to use `actions/setup-p
 |:--------------------- |:----------------- |:------------|
 | `credential_id` | **Required**      | Credential id use for authentication. For generate credentials, see [here](https://help.cloudify.ro/en/article/generate-application-credentials-for-project-1wlq1za/).
 | `credential_secret`         | **Required**      | Credential secret use for authentication. For generate credentials, see [here](https://help.cloudify.ro/en/article/generate-application-credentials-for-project-1wlq1za/).
-| `name`             | ***Optional***    | Name your server.
-| `keypair_name`      | ***Optional***    | Your SSH Key name from Cloudify account.
-| `command`           | ***Optional***    | Command for deploy, docker run.
+| `name`             | **Required**    | Name your server.
+| `keypair_name`      | **Required**    | Your SSH Key name from Cloudify account.
+| `command`           | **Required**    | Command for deploy, docker run.
 | `flavor`           | ***Optional***    | Flavor for server(See [flavors](https://cloudify.ro/pricing/cloud-vps)).
 | `image`           | ***Optional***    | Choose an image(operating system) from Cloudify, default image is `docker-ubuntu-20.04` 
 | `network_id`           | ***Optional***    | For custom network, default is `public` network.
