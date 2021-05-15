@@ -28,7 +28,7 @@ The openstack client must be installed. For this we need to use `actions/setup-p
 | `network_id`           | ***Optional***    | For custom network, default is `public` network.
 
 ## Example usage
-Example deploy for a wordpress image.
+Deploy a wordpress image.
 
 ```yaml
     - uses: actions/checkout@v2
@@ -43,9 +43,9 @@ Example deploy for a wordpress image.
       with: 
         credential_id: ${{ secrets.ID }}
         credential_secret: ${{ secrets.SECRET }}
-        name: server-github-01
-        keypair_name: alin-key
-        command: docker run --name wordpress-github -p 80:80 -d wordpress
+        name: server-production-01
+        keypair_name: user-key
+        command: docker run --name wordpress-production -p 80:80 -d wordpress
 ```
 
 ## License
