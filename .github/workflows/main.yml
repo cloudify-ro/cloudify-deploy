@@ -13,7 +13,7 @@ jobs:
       with:
         packages: python-openstackclient
     - name: Deploy Container to Cloudify
-      uses: cloudify-ro/cloudify-deploy@v1
+      uses: ./
 
       with: 
         credential_id: ${{ secrets.ID }}
