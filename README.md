@@ -2,7 +2,9 @@
 This action help you to deploy your code to Cloudify.
 PRs are welcome.
 
-[![.github/workflows/main.yml](https://github.com/cloudify-ro/cloudify-deploy/actions/workflows/main.yml/badge.svg)](https://github.com/cloudify-ro/cloudify-deploy/actions/workflows/main.yml)
+[![.github/workflows/main.yml](https://github.com/cloudify-ro/cloudify-deploy/actions/workflows/main.yml/badge.svg)](https://github.com/cloudify-ro/cloudify-deploy/actions/workflows/main.yml) ![](https://img.shields.io/github/v/release/cloudify-ro/cloudify-deploy?color=blueviolet&logo=Cloudify)
+
+
 
 ## Prerequisites
 The openstack client must be installed. For this we need to use `actions/setup-python@v1` and `BSFishy/pip-action@v1` to install the openstack client.
