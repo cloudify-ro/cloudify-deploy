@@ -25,7 +25,7 @@ inputs:
     default: m1.g2.4
     required: false
   image:
-    description: "Image id for server, for docker commands a pre-installed docker image is required."
+    description: "Image id for server, recommandation docker-ubuntu-20.04"
     default: docker-ubuntu-20.04 
     required: false
   network_id:
