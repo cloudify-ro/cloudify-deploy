@@ -19,5 +19,5 @@ jobs:
         credential_id: ${{ secrets.ID }}
         credential_secret: ${{ secrets.SECRET }}
         name: server-github-01
-        keypair_name: test-key
+        keypair_name: alin-key
         command: docker run --name wordpress-github -p 80:80 -d wordpress
