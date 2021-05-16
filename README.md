@@ -1,5 +1,5 @@
-# Deploy to Cloudify Github Action
-This action help you to deploy your code to Cloudify.
+# Deploy to Cloudify.ro Github Action
+This action help you to deploy your code to Cloudify.ro.
 PRs are welcome.
 
 [![.github/workflows/main.yml](https://github.com/cloudify-ro/cloudify-deploy/actions/workflows/main.yml/badge.svg)](https://github.com/cloudify-ro/cloudify-deploy/actions/workflows/main.yml) ![](https://img.shields.io/github/v/release/cloudify-ro/cloudify-deploy?color=blueviolet&logo=Cloudify)
