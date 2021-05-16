@@ -1,9 +1,14 @@
-on: [push]
+on:
+  push:
+    branches:
+      - "!*"
+    tags:
+      - "v*"
 
 jobs:
   deploy_cloudify_job:
     runs-on: ubuntu-latest
-    name: Deploy to Cloudify Job
+    name: Deploy to Cloudify.ro Job
     steps:
     - uses: actions/checkout@v2
     - name: Setup Python
@@ -12,7 +17,7 @@ jobs:
       uses: BSFishy/pip-action@v1
       with:
         packages: python-openstackclient
-    - name: Deploy Container to Cloudify
+    - name: Deploy Container to Cloudify.ro
       uses: ./
 
       with: 

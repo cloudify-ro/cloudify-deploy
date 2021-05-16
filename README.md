@@ -23,10 +23,10 @@ The openstack client must be installed. For this we need to use `actions/setup-p
 | `credential_id` | **Required**      | Credential id use for authentication. For generate credentials, see [here](https://help.cloudify.ro/en/article/generate-application-credentials-for-project-1wlq1za/).
 | `credential_secret`         | **Required**      | Credential secret use for authentication. For generate credentials, see [here](https://help.cloudify.ro/en/article/generate-application-credentials-for-project-1wlq1za/).
 | `name`             | **Required**    | Name your server.
-| `keypair_name`      | **Required**    | Your SSH Key name from Cloudify account.
+| `keypair_name`      | **Required**    | Your SSH Key name from Cloudify.ro account.
 | `command`           | **Required**    | Command for deploy, docker run.
 | `flavor`           | ***Optional***    | Flavor for server(See [flavors](https://cloudify.ro/pricing/cloud-vps)).
-| `image`           | ***Optional***    | Choose an image(operating system) from Cloudify, default image is `docker-ubuntu-20.04` 
+| `image`           | ***Optional***    | Choose an image(operating system) from Cloudify.ro, default image is `docker-ubuntu-20.04` 
 | `network_id`           | ***Optional***    | For custom network, default is `public` network.
 
 ## Example usage
@@ -40,7 +40,7 @@ Deploy a wordpress image.
       uses: BSFishy/pip-action@v1
       with:
         packages: python-openstackclient
-    - name: Deploy Container to Cloudify
+    - name: Deploy Container to Cloudify.ro
       uses: cloudify-ro/cloudify-deploy@v1
       with: 
         credential_id: ${{ secrets.ID }}

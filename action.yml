@@ -1,6 +1,6 @@
-name: "Deploy to Cloudify"
+name: "Deploy to Cloudify.ro"
 author: Cloudify
-description: "Deploy your code on Cloudify with GitHub Actions"
+description: "Deploy your code on Cloudify.ro with GitHub Actions"
 branding:
   icon: cloud
   color: purple
