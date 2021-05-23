@@ -1,6 +1,6 @@
-name: "Deploy to Cloudify.ro"
+name: "Deploy to Cloudify"
 author: Cloudify
-description: "Deploy your code on Cloudify.ro with GitHub Actions"
+description: "Deploy your code on Cloudify with GitHub Actions"
 branding:
   icon: cloud
   color: purple
@@ -11,27 +11,27 @@ inputs:
   credential_secret:
     description: "Application Credential Secret; Used for authorization."
     required: true
+  flavor:
+    description: "Flavor for server"
+    default: m1.g2.4
+    required: false
+  image:
+    description: "Image id for server, for docker commands a pre-installed docker image is required."
+    default: docker-ubuntu-20.04 
+    required: false
   name:
     description: "Your name server"
     required: true
+  network_id:
+    description: "Network id for server"
+    default: "public"
+    required: false
   keypair_name:
     description: "Keypair name for SSH"
     required: true
   command:
     description: "Your command for deploy"
     required: true
-  flavor:
-    description: "Flavor for server"
-    default: m1.g2.4
-    required: false
-  image:
-    description: "Image id for server, recommandation docker-ubuntu-20.04"
-    default: docker-ubuntu-20.04 
-    required: false
-  network_id:
-    description: "Network id for server"
-    default: "public"
-    required: false
 
 runs:
   using: "composite"
